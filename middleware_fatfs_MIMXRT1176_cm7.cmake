@@ -13,19 +13,5 @@ target_include_directories(${MCUX_SDK_PROJECT_NAME} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/source
 )
 
-#OR Logic component
-if(CONFIG_USE_middleware_fatfs_mmc) 
-    include(middleware_fatfs_mmc)
-endif()
-if(CONFIG_USE_middleware_fatfs_usb) 
-    include(middleware_fatfs_usb)
-endif()
-if(CONFIG_USE_middleware_fatfs_ram) 
-    include(middleware_fatfs_ram)
-endif()
-if(CONFIG_USE_middleware_fatfs_sd) 
-    include(middleware_fatfs_sd)
-endif()
-if(CONFIG_USE_middleware_fatfs_nand) 
-    include(middleware_fatfs_nand)
-endif()
+
+include(middleware_fatfs_ram)
